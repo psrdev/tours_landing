@@ -1,0 +1,19 @@
+{
+    "name": "brolion/landing",
+    "description": "Landing page for brolion tourism",
+    "autoload": {
+        "psr-4": {
+            "Brolion\\Landing\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pravin Singh Rana",
+            "email": "dev.psrana@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.10",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
