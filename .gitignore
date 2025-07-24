@@ -1,0 +1,29 @@
+# Composer dependencies
+/vendor/
+
+# Environment variables
+.env
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Log files
+*.log
+
+# Cache files
+.cache/
+*.tmp
+
+# Uploaded files (optional, if storing leads/images)
+uploads/
+
+# Node/npm (in case you add frontend build tools later)
+node_modules/
+dist/

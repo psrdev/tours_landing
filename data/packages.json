@@ -1,0 +1,197 @@
+{
+    "packages": [
+        {
+            "destination": {
+                "name": "Thailand",
+                "slug": "thailand-tour",
+                "image": "thailand.jpg"
+            },
+            "packages": [
+                {
+                    "title": "Bangkok & Pattaya Delight – 4 Days, 3 Nights",
+                    "slug": "bangkok-pattaya-delight-4-days-3-nights",
+                    "price": "INR 20,300",
+                    "duration": "2 Nights Pattaya, 2 Nights Bangkok",
+                    "highlights": [
+                        "Daily Breakfast (except day of arrival)",
+                        "Coral Island Tour with Lunch (Speed Boat, SIC)",
+                        "Bangkok City Tour (Golden & Marble Buddha, PVT)",
+                        "Safari World & Marine Park with Lunch (SIC)"
+                    ],
+                    "transportation": [
+                        "Bangkok Airport → Pattaya Hotel",
+                        "Pattaya Hotel → Bangkok Hotel",
+                        "Bangkok Hotel → Bangkok Airport"
+                    ],
+                    "exclusions": [
+                        "GST + TCS",
+                        "Visa, Airfare",
+                        "Travel Insurance",
+                        "National Park Fee"
+                    ],
+                    "validity": "Till July",
+                    "image": "thailand-bangkok-pattaya.jpg",
+                    "description": "Explore the best of Thailand's vibrant cities! This exciting package takes you to the bustling streets of Bangkok and the beachside charm of Pattaya. Enjoy a Coral Island tour, Bangkok city highlights including the Golden & Marble Buddha, and a fun-filled day at Safari World & Marine Park. Perfect for a quick, fun getaway with a mix of city and sea."
+                },
+                {
+                    "title": "Phuket & Krabi Beach Escape – 4 Days, 3 Nights",
+                    "slug": "phuket-krabi-beach-escape-4-days-3-nights",
+                    "price": "INR 20,500",
+                    "duration": "2 Nights Krabi, 2 Nights Phuket",
+                    "highlights": [
+                        "Krabi 4 Island Tour with Lunch (Longtail Boat, SIC)",
+                        "Phuket City Tour (Chalong Temple, Old Town, PVT)",
+                        "Phi Phi Island Tour with Lunch (Big Boat, SIC)"
+                    ],
+                    "transportation": [
+                        "Phuket Airport → Krabi Hotel",
+                        "Krabi Hotel → Phuket Hotel",
+                        "Phuket Hotel → Phuket Airport"
+                    ],
+                    "exclusions": [
+                        "GST + TCS",
+                        "Visa, Airfare",
+                        "National Park Fee",
+                        "Travel Insurance"
+                    ],
+                    "validity": "Till July",
+                    "image": "thailand.jpg",
+                    "description": "Discover the tropical wonders of Southern Thailand! Experience the stunning beaches of Krabi and the vibrant culture of Phuket. Cruise through Krabi’s 4 Islands, visit iconic landmarks in Phuket, and explore the crystal-clear waters of Phi Phi Island. Ideal for beach lovers and nature enthusiasts."
+                }
+            ]
+        },
+        {
+            "destination": {
+                "name": "Singapore",
+                "slug": "singapore-tour",
+                "image": "singapore.jpg"
+            },
+            "packages": [
+                {
+                    "title": "Singapore Fun Fiesta – 3 Nights 4 Days",
+                    "slug": "singapore-fun-fiesta-3-nights",
+                    "price": "INR 39,600",
+                    "duration": "3 Nights Singapore",
+                    "highlights": [
+                        "Singapore City Tour with Guide (SIC)",
+                        "Universal Studios Entry (SIC)",
+                        "Night Safari (SIC)",
+                        "Sentosa Cable Car & Island Admission (SIC)"
+                    ],
+                    "transportation": [
+                        "Changi Airport → Hotel (PVT)",
+                        "Hotel → Changi Airport (PVT)"
+                    ],
+                    "exclusions": [
+                        "GST + TCS",
+                        "Visa, Airfare",
+                        "Travel Insurance"
+                    ],
+                    "validity": "Till July",
+                    "image": "singapore.jpg",
+                    "description": "Unleash your inner adventurer in Singapore! A perfect mix of fun and culture, this package includes a guided city tour, thrilling rides at Universal Studios, a wild Night Safari, and panoramic views via the Sentosa cable car. A must for families and first-time visitors."
+                }
+            ]
+        },
+        {
+            "destination": {
+                "name": "Dubai",
+                "slug": "dubai-tour",
+                "image": "dubai.jpg"
+            },
+            "packages": [
+                {
+                    "title": "Dubai Explorer – 4 Nights-5 Days",
+                    "slug": "dubai-explorer-4-nights",
+                    "price": "INR 19,500",
+                    "duration": "4 Nights Dubai",
+                    "highlights": [
+                        "Marina Dhow Cruise with Dinner (SIC)",
+                        "Dubai City Tour (SIC)",
+                        "Desert Safari with BBQ Dinner (SIC)",
+                        "Burj Khalifa 124th Floor + Dubai Mall Visit (SIC)"
+                    ],
+                    "transportation": [
+                        "Dubai Airport → Hotel (PVT)",
+                        "Hotel → Dubai Airport (PVT)"
+                    ],
+                    "exclusions": [
+                        "GST + TCS",
+                        "Visa, Airfare",
+                        "Tourism Dirham Tax",
+                        "Travel Insurance"
+                    ],
+                    "validity": "Till July",
+                    "image": "dubai.jpg",
+                    "description": "Experience the glamour and adventure of Dubai! Cruise along the Marina, explore iconic Dubai sights, go on a thrilling desert safari, and ascend to the 124th floor of Burj Khalifa. This package offers the perfect blend of culture, luxury, and excitement."
+                }
+            ]
+        },
+        {
+            "destination": {
+                "name": "Georgia",
+                "slug": "georgia-tour",
+                "image": "georgia.jpg"
+            },
+            "packages": [
+                {
+                    "title": "Tbilisi & Mountains Tour – 3 Nights",
+                    "slug": "tbilisi-mountains-tour-3-nights",
+                    "price": "INR 21,800",
+                    "duration": "3 Nights Tbilisi",
+                    "highlights": [
+                        "Tbilisi & Mtskheta City Tour (PVT)",
+                        "Ananuri-Gudauri-Kazbegi Tour (PVT)",
+                        "English Speaking Driver",
+                        "Entry Fees to Major Sites"
+                    ],
+                    "transportation": [
+                        "Tbilisi Airport → Hotel",
+                        "Hotel → Tbilisi Airport"
+                    ],
+                    "exclusions": [
+                        "GST + TCS",
+                        "Visa, Airfare",
+                        "Travel Insurance"
+                    ],
+                    "validity": "Till July",
+                    "image": "georgia.jpg",
+                    "description": "Get enchanted by Georgia’s capital and the Caucasus mountains! Wander through the historic streets of Tbilisi, explore the ancient city of Mtskheta, and enjoy a private scenic drive to Ananuri, Gudauri, and Kazbegi with a local English-speaking driver."
+                }
+            ]
+        },
+        {
+            "destination": {
+                "name": "Azerbaijan",
+                "slug": "azerbaijan-tour",
+                "image": "azerbaijan.jpg"
+            },
+            "packages": [
+                {
+                    "title": "Baku Cultural Discovery – 3 Nights",
+                    "slug": "baku-cultural-discovery-3-nights",
+                    "price": "INR 17,800",
+                    "duration": "3 Nights Baku",
+                    "highlights": [
+                        "Baku City Tour (PVT)",
+                        "Gobustan Mud Volcanoes & Museum (PVT)",
+                        "Absheron Tour – Fire Temple & Fire Mountain (PVT)",
+                        "English Speaking Driver"
+                    ],
+                    "transportation": [
+                        "Baku Airport → Hotel",
+                        "Hotel → Baku Airport"
+                    ],
+                    "exclusions": [
+                        "GST + TCS",
+                        "Visa, Airfare",
+                        "Travel Insurance"
+                    ],
+                    "validity": "Till July",
+                    "image": "azerbaijan.jpg",
+                    "description": "Uncover the rich heritage of Azerbaijan! Explore Baku’s modern and historic sites, visit the fascinating Gobustan Mud Volcanoes, and witness the mystical flames of Fire Temple & Fire Mountain. All with a knowledgeable English-speaking driver."
+                }
+            ]
+        }
+    ]
+}
