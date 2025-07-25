@@ -1,63 +1,61 @@
+<?php
+require_once('./src/bootstrap.php');
+use App\Repositories\PackageRepository;
+$repo = new PackageRepository();
+$all_data = $repo->all();
+
+?>
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="free-educational-responsive-web-template-webEdu">
-        <meta name="author" content="webThemez.com">
-        <title>Saifia Airway | Saifia Tour Package Booking | Saifia Holidays Booking</title>
-        <meta name="description" content="Book cheapest Holidays packages from FLYSAFIA Airways Pvt Ltd, and Get 30% Each Booking your Tour Packages ">
-        <meta name="keywords" content="Holidays Packages, Tour Package Booking, Cheapest Holidays Packages Booing, Book your Holidays Trips, ">
-        <meta name="robots" content="index, follow, noodp">
-        <meta name="page-topic" content=" Flysaifia Airways Pvt Ltd">
-        <meta name="Copyright" content="Flysaifia">
-        <link rel="canonical" href="http://www.flysaifia.com">
-        <meta name="googlebot" content="index, follow">
-        <meta name="YahooSeeker" content="index, follow">
-        <meta name="msnbot" content="index, follow">
-        <meta name="allow-search" content="yes">
-        <link rel="shortcut icon" href="images/favicon.ico">
-        <link rel="favicon" href="images/favicon.ico">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link
-            href="css/slick.css"
-            rel="stylesheet"
-            type="text/css"
-            media="screen"
-        >
-        <link
-            href="css/slick-theme.css"
-            rel="stylesheet"
-            type="text/css"
-            media="screen"
-        >
-        <link rel="stylesheet" href="css/slicknav.css">
-    </head>
-    <body>
-        <section id="header">
-            <header>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="logo">
-                                <img src="images/logo.png" alt="" class="ing-fluid">
-                            </div>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="free-educational-responsive-web-template-webEdu">
+    <meta name="author" content="webThemez.com">
+    <title>Brolion Airway | Brolion Tour Package Booking | Brolion Holidays Booking</title>
+    <meta name="description"
+        content="Book cheapest Holidays packages from FLYSAFIA Airways Pvt Ltd, and Get 30% Each Booking your Tour Packages ">
+    <meta name="keywords"
+        content="Holidays Packages, Tour Package Booking, Cheapest Holidays Packages Booing, Book your Holidays Trips, ">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="page-topic" content=" BrolionTourism Pvt Ltd">
+    <meta name="Copyright" content="BrolionTourism">
+    <link rel="canonical" href="http://www.BrolionTourism.com">
+    <meta name="googlebot" content="index, follow">
+    <meta name="YahooSeeker" content="index, follow">
+    <meta name="msnbot" content="index, follow">
+    <meta name="allow-search" content="yes">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="favicon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/slick.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="css/slick-theme.css" rel="stylesheet" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/slicknav.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <img src="images/logo.png" alt="" class="ing-fluid">
                         </div>
-                        <div class="col-md-3">
-                            <div class="text-center">
-                                <a
-                                    href="#"
-                                    class="btn deal"
-                                    data-toggle="modal"
-                                    data-target="#exampleModal-1"
-                                >Last Minute Deal</a>
-                            </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <a href="#" class="btn deal" data-toggle="modal" data-target="#exampleModal-1">Last Minute
+                                Deal</a>
                         </div>
-                        <div class="col-md-6">
-                            <div class="head-cnt">
-                                <ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="head-cnt">
+                            <ul>
                                 </a>
                                 <li>
                                     <i>
@@ -90,14 +88,12 @@
                             <h3 style="color:#fff;">Get Multiple Itineraries & Personalised Suggestions</h3>
                             <h3 style="color:#fff;">from our Experts</h3>
                             <ul class="destination">
-                                <li>MANALI</li>
-                                <li>SHIMLA</li>
-                                <li>KERALA</li>
-                                <li>GOA</li>
-                                <li>ANDAMAN</li>
-                                <li>LADAKH</li>
-                                <li>AMARNATH</li>
-                                <li>SRINAGAR</li>
+                                <?php foreach ($all_data as $dest) { ?>
+                                    <li><?php echo $dest['destination']['name'] ?></li>
+
+                                <?php } ?>
+
+
                             </ul>
                             <ul class="trusted">
                                 <li>
@@ -121,48 +117,23 @@
                             <div class="get-free-qoute">
                                 <form method="POST" name="indexform" action="query-form.php">
                                     <div class="form-group">
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            class="form-control"
-                                            placeholder="*Name"
-                                            required
-                                        >
+                                        <input type="text" name="name" class="form-control" placeholder="*Name"
+                                            required>
                                     </div>
                                     <div class="form-group">
-                                        <input
-                                            type="text"
-                                            name="email"
-                                            class="form-control"
-                                            placeholder="Email"
-                                            required
-                                        >
+                                        <input type="text" name="email" class="form-control" placeholder="Email"
+                                            required>
                                     </div>
                                     <div class="form-group">
-                                        <input
-                                            type="text"
-                                            name="phone"
-                                            class="form-control"
-                                            placeholder="*Mobile No."
-                                            required
-                                        >
+                                        <input type="text" name="phone" class="form-control" placeholder="*Mobile No."
+                                            required>
                                     </div>
                                     <div class="form-group">
-                                        <input
-                                            type="text"
-                                            name="date"
-                                            class="form-control"
-                                            placeholder="Travel Date (DD/MM/YY)"
-                                            required
-                                        >
+                                        <input type="text" name="date" class="form-control"
+                                            placeholder="Travel Date (DD/MM/YY)" required>
                                     </div>
                                     <div class="form-group">
-                                        <select
-                                            class="form-control"
-                                            name="person"
-                                            id="person"
-                                            required
-                                        >
+                                        <select class="form-control" name="person" id="person" required>
                                             <option value="">No. of Person</option>
                                             <option>01</option>
                                             <option>02</option>
@@ -178,31 +149,26 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <select
-                                            class="form-control"
-                                            name="package"
-                                            id="package"
-                                            required
-                                        >
+                                        <select class="form-control" name="package" id="package" required>
                                             <option value="">Select Package</option>
-                                            <option>Manali Honeymoon Tour Packages</option>
-                                            <option>Manali Volvo Tour Packages</option>
-                                            <option>Shimla Manali Tour Package</option>
-                                            <option>Amaranth Tour Package</option>
-                                            <option>Andmaan Tour Package</option>
-                                            <option>Kerala Tour Package</option>
-                                            <option>Goa Tour Package</option>
-                                            <option>Surreal Ladakh Holiday Package</option>
-                                            <option>SriNagar Tour Package</option>
+                                            <?php foreach ($all_data as $dest) {
+
+                                                foreach ($dest['packages'] as $pack) { ?>
+                                                    <option value="<?php echo $pack['title'] ?>"><?php echo $pack['title'] ?>
+                                                    </option>
+
+
+                                                <?php } ?>
+
+
+
+                                            <?php } ?>
+
                                         </select>
                                     </div>
                                     <div class="text-center">
-                                        <button
-                                            type="submit"
-                                            class="btn btn-enq "
-                                            name="submit"
-                                            value="Send request"
-                                        >Send Enquiry</button>
+                                        <button type="submit" class="btn btn-enq " name="submit"
+                                            value="Send request">Send Enquiry</button>
                                     </div>
                                 </form>
                             </div>
@@ -310,8 +276,8 @@
                             </div>
                             <div class="special-honymoon">
                                 <p>
-                                    wine bottle, bed of roses + a candle light 
-                dinner with honeymoon cake
+                                    wine bottle, bed of roses + a candle light
+                                    dinner with honeymoon cake
                                 </p>
                             </div>
                         </figure>
@@ -370,14 +336,8 @@
                                     <li>Fagu valley in Shimla</li>
                                 </ul>
                             </div>
-                            <a
-                                class="read-collpse"
-                                data-toggle="collapse"
-                                href="#collapseExample"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseExample"
-                            >
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
                                 <span>Read More</span>
                                 <i>Close</i>
                             </a>
@@ -390,12 +350,8 @@
                                 <i class="fa fa-rupee"></i> 13,899 Onwards
                             </div>
                             <div class="btn-detail">
-                                <a
-                                    href="#"
-                                    class="btn btn-detail"
-                                    data-toggle="modal"
-                                    data-target="#exampleModal"
-                                >Get Free Quote</a>
+                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
+                                    Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -463,14 +419,8 @@
                                     <li>Manikaran in Kullu Manali</li>
                                 </ul>
                             </div>
-                            <a
-                                class="read-collpse"
-                                data-toggle="collapse"
-                                href="#collapseExample6"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseExample6"
-                            >
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample6" role="button"
+                                aria-expanded="false" aria-controls="collapseExample6">
                                 <span>Read More</span>
                                 <i>Close</i>
                             </a>
@@ -483,12 +433,8 @@
                                 <i class="fa fa-rupee"></i> 7,399 Onwards
                             </div>
                             <div class="btn-detail">
-                                <a
-                                    href="#"
-                                    class="btn btn-detail"
-                                    data-toggle="modal"
-                                    data-target="#exampleModal"
-                                >Get Free Quote</a>
+                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
+                                    Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -556,14 +502,8 @@
                                     <li>Himalayan Nature park</li>
                                 </ul>
                             </div>
-                            <a
-                                class="read-collpse"
-                                data-toggle="collapse"
-                                href="#collapseExample3"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseExample3"
-                            >
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample3" role="button"
+                                aria-expanded="false" aria-controls="collapseExample3">
                                 <span>Read More</span>
                                 <i>Close</i>
                             </a>
@@ -576,12 +516,8 @@
                                 <i class="fa fa-rupee"></i> 11,399 Onwards
                             </div>
                             <div class="btn-detail">
-                                <a
-                                    href="#"
-                                    class="btn btn-detail"
-                                    data-toggle="modal"
-                                    data-target="#exampleModal"
-                                >Get Free Quote</a>
+                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
+                                    Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -600,7 +536,8 @@
                         </figure>
                         <h2>Amaranth Tour Package</h2>
                         <h3>3N/4D /
-                            <span>Sonamarg - Neelgrat/Baltal - Holy Amarnath Cave - Nishat Garden - Shalimar Garden</span>
+                            <span>Sonamarg - Neelgrat/Baltal - Holy Amarnath Cave - Nishat Garden - Shalimar
+                                Garden</span>
                         </h3>
                         <ul class="itnry">
                             <li class="active">
@@ -637,7 +574,8 @@
                         <div class="inclusions">
                             <h5>Destinations Covered:</h5>
                             <ul class="pkg-incusion">
-                                <li>Sonamarg - Neelgrat/Baltal - Holy Amarnath Cave - Nishat Garden - Shalimar Garden</li>
+                                <li>Sonamarg - Neelgrat/Baltal - Holy Amarnath Cave - Nishat Garden - Shalimar Garden
+                                </li>
                             </ul>
                             <div class="collapse" id="collapseExample4">
                                 <ul class="pkg-incusion">
@@ -648,14 +586,8 @@
                                     <li>Mugal garden of srinagar</li>
                                 </ul>
                             </div>
-                            <a
-                                class="read-collpse"
-                                data-toggle="collapse"
-                                href="#collapseExample4"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseExample4"
-                            >
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample4" role="button"
+                                aria-expanded="false" aria-controls="collapseExample4">
                                 <span>Read More</span>
                                 <i>Close</i>
                             </a>
@@ -668,12 +600,8 @@
                                 <i class="fa fa-rupee"></i> 11,800 Onwards
                             </div>
                             <div class="btn-detail">
-                                <a
-                                    href="#"
-                                    class="btn btn-detail"
-                                    data-toggle="modal"
-                                    data-target="#exampleModal"
-                                >Get Free Quote</a>
+                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
+                                    Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -740,14 +668,8 @@
                                     <li>Water Sports Complex</li>
                                 </ul>
                             </div>
-                            <a
-                                class="read-collpse"
-                                data-toggle="collapse"
-                                href="#collapseExample5"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseExample5"
-                            >
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample5" role="button"
+                                aria-expanded="false" aria-controls="collapseExample5">
                                 <span>Read More</span>
                                 <i>Close</i>
                             </a>
@@ -760,12 +682,8 @@
                                 <i class="fa fa-rupee"></i> 11,999 Onwards
                             </div>
                             <div class="btn-detail">
-                                <a
-                                    href="#"
-                                    class="btn btn-detail"
-                                    data-toggle="modal"
-                                    data-target="#exampleModal"
-                                >Get Free Quote</a>
+                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
+                                    Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -834,14 +752,8 @@
                                     <li>Cruise-optional</li>
                                 </ul>
                             </div>
-                            <a
-                                class="read-collpse"
-                                data-toggle="collapse"
-                                href="#collapseExample2"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseExample2"
-                            >
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample2" role="button"
+                                aria-expanded="false" aria-controls="collapseExample2">
                                 <span>Read More</span>
                                 <i>Close</i>
                             </a>
@@ -854,12 +766,8 @@
                                 <i class="fa fa-rupee"></i> 7,299 Onwards
                             </div>
                             <div class="btn-detail">
-                                <a
-                                    href="#"
-                                    class="btn btn-detail"
-                                    data-toggle="modal"
-                                    data-target="#exampleModal"
-                                >Get Free Quote</a>
+                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
+                                    Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -915,7 +823,7 @@
                         <div class="inclusions">
                             <h5>Destinations Covered:</h5>
                             <ul class="pkg-incusion">
-                                <li>1N Goa - 1N South Goa -  1N North Goa</li>
+                                <li>1N Goa - 1N South Goa - 1N North Goa</li>
                             </ul>
                             <div class="collapse" id="collapseExample7">
                                 <ul class="pkg-incusion">
@@ -930,14 +838,8 @@
                                     <li>Beach Tour at last day</li>
                                 </ul>
                             </div>
-                            <a
-                                class="read-collpse"
-                                data-toggle="collapse"
-                                href="#collapseExample7"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseExample4"
-                            >
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample7" role="button"
+                                aria-expanded="false" aria-controls="collapseExample4">
                                 <span>Read More</span>
                                 <i>Close</i>
                             </a>
@@ -950,12 +852,8 @@
                                 <i class="fa fa-rupee"></i> 7,111 Onwards
                             </div>
                             <div class="btn-detail">
-                                <a
-                                    href="#"
-                                    class="btn btn-detail"
-                                    data-toggle="modal"
-                                    data-target="#exampleModal"
-                                >Get Free Quote</a>
+                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
+                                    Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -1027,14 +925,8 @@
                                     <li>Khardungla pass</li>
                                 </ul>
                             </div>
-                            <a
-                                class="read-collpse"
-                                data-toggle="collapse"
-                                href="#collapseExample8"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseExample5"
-                            >
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample8" role="button"
+                                aria-expanded="false" aria-controls="collapseExample5">
                                 <span>Read More</span>
                                 <i>Close</i>
                             </a>
@@ -1047,12 +939,8 @@
                                 <i class="fa fa-rupee"></i> 14,499 Onwards
                             </div>
                             <div class="btn-detail">
-                                <a
-                                    href="#"
-                                    class="btn btn-detail"
-                                    data-toggle="modal"
-                                    data-target="#exampleModal"
-                                >Get Free Quote</a>
+                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
+                                    Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -1130,14 +1018,8 @@
                                     <li>Gulmarg</li>
                                 </ul>
                             </div>
-                            <a
-                                class="read-collpse"
-                                data-toggle="collapse"
-                                href="#collapseExample9"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseExample2"
-                            >
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample9" role="button"
+                                aria-expanded="false" aria-controls="collapseExample2">
                                 <span>Read More</span>
                                 <i>Close</i>
                             </a>
@@ -1150,12 +1032,8 @@
                                 <i class="fa fa-rupee"></i> 10,500 Onwards
                             </div>
                             <div class="btn-detail">
-                                <a
-                                    href="#"
-                                    class="btn btn-detail"
-                                    data-toggle="modal"
-                                    data-target="#exampleModal"
-                                >Get Free Quote</a>
+                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
+                                    Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -1170,12 +1048,8 @@
                     <h1 class="h1-global white-color">Still
                         <span class="white-color">Confused ?</span>
                     </h1>
-                    <a
-                        href="#"
-                        class="btn requirement"
-                        data-toggle="modal"
-                        data-target="#exampleModal"
-                    >Click & Let Us Know Your Requirement</a>
+                    <a href="#" class="btn requirement" data-toggle="modal" data-target="#exampleModal">Click & Let Us
+                        Know Your Requirement</a>
                 </div>
             </div>
         </div>
@@ -1231,12 +1105,8 @@
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <a
-                        href="#"
-                        data-toggle="modal"
-                        data-target="#exampleModal"
-                        class="btn requirement"
-                    >Call Now for customized packages</a>
+                    <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn requirement">Call Now for
+                        customized packages</a>
                 </div>
             </div>
         </div>
@@ -1269,7 +1139,8 @@
                 </div>
                 <div class="col-md-3">
                     <!--<h4 class="ftr-h4">Approved By</h4>
-        <div class="approved"> <img src="images/logos.png" alt="" class="img-fluid"> </div>---></div>
+        <div class="approved"> <img src="images/logos.png" alt="" class="img-fluid"> </div>--->
+                </div>
                 <div class="col-md-5">
                     <h4 class="ftr-h4">We Accept All Major Credit And Debit Cards</h4>
                     <div class="approved">
@@ -1348,12 +1219,8 @@
                     </div>
                     <div class="col-md-9 p-0">
                         <div class="_col_bm">
-                            <button
-                                type="button"
-                                class="_btn_bm"
-                                data-toggle="modal"
-                                data-target="#exampleModal"
-                            >SEND ENQUIRY</button>
+                            <button type="button" class="_btn_bm" data-toggle="modal" data-target="#exampleModal">SEND
+                                ENQUIRY</button>
                         </div>
                     </div>
                 </div>
@@ -1361,72 +1228,33 @@
         </div>
     </div>
     <!-------------------------Modal----------------------->
-    <div
-        class="modal fade coi-pop"
-        id="exampleModal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-    >
+    <div class="modal fade coi-pop" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Get Free Quote</h5>
-                    <button
-                        type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                    >
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <form method="POST" name="indexform" action="query-form.php">
                         <div class="form-group">
-                            <input
-                                type="text"
-                                name="name"
-                                class="form-control"
-                                placeholder="*Name"
-                                required
-                            >
+                            <input type="text" name="name" class="form-control" placeholder="*Name" required>
                         </div>
                         <div class="form-group">
-                            <input
-                                type="text"
-                                name="email"
-                                class="form-control"
-                                placeholder="*Email"
-                                required
-                            >
+                            <input type="text" name="email" class="form-control" placeholder="*Email" required>
                         </div>
                         <div class="form-group">
-                            <input
-                                type="text"
-                                name="phone"
-                                class="form-control"
-                                placeholder="*Mobile No."
-                                required
-                            >
+                            <input type="text" name="phone" class="form-control" placeholder="*Mobile No." required>
                         </div>
                         <div class="form-group">
-                            <input
-                                type="text"
-                                name="date"
-                                class="form-control"
-                                placeholder="Travel Date (DD/MM/YY)"
-                                required
-                            >
+                            <input type="text" name="date" class="form-control" placeholder="Travel Date (DD/MM/YY)"
+                                required>
                         </div>
                         <div class="form-group">
-                            <select
-                                class="form-control"
-                                name="person"
-                                id="person"
-                                required
-                            >
+                            <select class="form-control" name="person" id="person" required>
                                 <option value="">No. of Person</option>
                                 <option>01</option>
                                 <option>02</option>
@@ -1442,12 +1270,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <select
-                                class="form-control"
-                                name="package"
-                                id="package"
-                                required
-                            >
+                            <select class="form-control" name="package" id="package" required>
                                 <option value="">Select Package</option>
                                 <option>Manali Honeymoon Tour Packages</option>
                                 <option>Manali Volvo Tour Packages</option>
@@ -1461,12 +1284,8 @@
                             </select>
                         </div>
                         <div class="text-center">
-                            <button
-                                type="submit"
-                                class="btn btn-enq "
-                                name="submit"
-                                value="Send request"
-                            >Send Enquiry</button>
+                            <button type="submit" class="btn btn-enq " name="submit" value="Send request">Send
+                                Enquiry</button>
                         </div>
                     </form>
                 </div>
@@ -1474,64 +1293,30 @@
         </div>
     </div>
     <!-------------------------Modal----------------------->
-    <div
-        class="modal fade coi-pop"
-        id="exampleModal-1"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-    >
+    <div class="modal fade coi-pop" id="exampleModal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Last Minute Deal</h5>
-                    <button
-                        type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                    >
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <form method="POST" name="indexform" action="query-form.php">
                         <div class="form-group">
-                            <input
-                                type="text"
-                                name="name"
-                                class="form-control"
-                                placeholder="*Name"
-                                required
-                            >
+                            <input type="text" name="name" class="form-control" placeholder="*Name" required>
                         </div>
                         <div class="form-group">
-                            <input
-                                type="text"
-                                name="email"
-                                class="form-control"
-                                placeholder="Email"
-                                required
-                            >
+                            <input type="text" name="email" class="form-control" placeholder="Email" required>
                         </div>
                         <div class="form-group">
-                            <input
-                                type="text"
-                                name="phone"
-                                class="form-control"
-                                placeholder="*Mobile No."
-                                required
-                            >
+                            <input type="text" name="phone" class="form-control" placeholder="*Mobile No." required>
                         </div>
                         <div class="form-group">
-                            <input
-                                type="text"
-                                name="date"
-                                class="form-control"
-                                placeholder="Travel Date (DD/MM/YY)"
-                                required
-                            >
+                            <input type="text" name="date" class="form-control" placeholder="Travel Date (DD/MM/YY)"
+                                required>
                         </div>
                         <div class="form-group">
                             <select class="form-control" name="person" id="person">
@@ -1563,12 +1348,8 @@
                                 <option>SriNagar Tour Package</option>
                             </select>
                         </div>
-                        <button
-                            type="submit"
-                            class="btn btn-enq "
-                            name="submit"
-                            value="Send request"
-                        >Send Enquiry</button>
+                        <button type="submit" class="btn btn-enq " name="submit" value="Send request">Send
+                            Enquiry</button>
                     </form>
                 </div>
             </div>
@@ -1579,434 +1360,417 @@
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
     <script type="text/javascript">
-	$(document).ready(function(){
-		$('#menu').slicknav();
-	});
+        $(document).ready(function () {
+            $('#menu').slicknav();
+        });
     </script>
     <script>
         $('#exampleModal').on('shown.bs.modal', function () {
-          $('body').addClass('fixed')
+            $('body').addClass('fixed')
         })
     </script>
     <script>
         $('#exampleModal-1').on('shown.bs.modal', function () {
-          $('body').addClass('fixed')
+            $('body').addClass('fixed')
         })
     </script>
     <script>
-jQuery('.testimonials').slick({
-slidesToShow: 1,
-slidesToScroll: 1,
-autoplay: true,
-autoplaySpeed: 3000000,
-dots: true,
-arrows: false,
- responsive: [
-		  {
-			breakpoint: 767,
-			settings: {
-			  slidesToShow: 1,
-			  slidesToScroll: 1,
-			  dots: true,
-			  arrows: false,
-			}
-		  },
-		  {
-			breakpoint: 480,
-			settings: {
-			  slidesToShow: 1,
-			  slidesToScroll: 1,
-			  dots: true,
-			  arrows: false,
-			}
-		  }
-		  ]
-});
+        jQuery('.testimonials').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000000,
+            dots: true,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: false,
+                    }
+                }
+            ]
+        });
     </script>
     <script>
-function validateForm() {
-	
-	
-	  var digits = "0123456789";
-// non-digit characters which are allowed in phone numbers
-var phoneNumberDelimiters = "()- ";
-// characters which are allowed in international phone numbers
-// (a leading + is OK)
-var validWorldPhoneChars = phoneNumberDelimiters + "+";
-// Minimum no of digits in an international phone no.
-var minDigitsInIPhoneNumber = 10;
-
-function isInteger(s)
-{   var i;
-    for (i = 0; i < s.length; i++)
-    {   
-        // Check that current character is number.
-        var c = s.charAt(i);
-        if (((c < "0") || (c > "9"))) return false;
-    }
-    // All characters are numbers.
-    return true;
-}
-function trim(s)
-{   var i;
-    var returnString = "";
-    // Search through string's characters one by one.
-    // If character is not a whitespace, append to returnString.
-    for (i = 0; i < s.length; i++)
-    {   
-        // Check that current character isn't whitespace.
-        var c = s.charAt(i);
-        if (c != " ") returnString += c;
-    }
-    return returnString;
-}
-function stripCharsInBag(s, bag)
-{   var i;
-    var returnString = "";
-    // Search through string's characters one by one.
-    // If character is not in bag, append to returnString.
-    for (i = 0; i < s.length; i++)
-    {   
-        // Check that current character isn't whitespace.
-        var c = s.charAt(i);
-        if (bag.indexOf(c) == -1) returnString += c;
-    }
-    return returnString;
-}
-
-function checkInternationalPhone(strPhone){
-var bracket=3
-strPhone=trim(strPhone)
-if(strPhone.indexOf("+")>1) return false
-if(strPhone.indexOf("-")!=-1)bracket=bracket+1
-if(strPhone.indexOf("(")!=-1 && strPhone.indexOf("(")>bracket)return false
-var brchr=strPhone.indexOf("(")
-if(strPhone.indexOf("(")!=-1 && strPhone.charAt(brchr+2)!=")")return false
-if(strPhone.indexOf("(")==-1 && strPhone.indexOf(")")!=-1)return false
-s=stripCharsInBag(strPhone,validWorldPhoneChars);
-return (isInteger(s) && s.length >= minDigitsInIPhoneNumber);
-}
-
-var Name=document.myForm.name
-	
-	if ((Name.value==null)||(Name.value=="")){
-		alert("Please Enter your Name")
-		Name.focus()
-		return false
-	}
-   
-
-	 var x = document.forms["myForm"]["email"].value;
-	 if (x == "") {
-        alert("Email must be filled out");
-	document.myForm.email.focus();
-        return false;
-    }
-    var atpos = x.indexOf("@");
-    var dotpos = x.lastIndexOf(".");
-    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-        alert("Not a valid e-mail address");
-		document.myForm.email.focus();
-        return false;
-    }
-	
+        function validateForm() {
 
 
+            var digits = "0123456789";
+            // non-digit characters which are allowed in phone numbers
+            var phoneNumberDelimiters = "()- ";
+            // characters which are allowed in international phone numbers
+            // (a leading + is OK)
+            var validWorldPhoneChars = phoneNumberDelimiters + "+";
+            // Minimum no of digits in an international phone no.
+            var minDigitsInIPhoneNumber = 10;
 
-	var Phone=document.myForm.phone
-	
-	if ((Phone.value==null)||(Phone.value=="")){
-		alert("Please Enter your Phone Number")
-		Phone.focus()
-		return false
-	}
-	if (checkInternationalPhone(Phone.value)==false){
-		alert("Please Enter a Valid Phone Number")
-	
-		Phone.focus()
-		return false
-	}
-	
-		var Name1=document.myForm.city
+            function isInteger(s) {
+                var i;
+                for (i = 0; i < s.length; i++) {
+                    // Check that current character is number.
+                    var c = s.charAt(i);
+                    if (((c < "0") || (c > "9"))) return false;
+                }
+                // All characters are numbers.
+                return true;
+            }
+            function trim(s) {
+                var i;
+                var returnString = "";
+                // Search through string's characters one by one.
+                // If character is not a whitespace, append to returnString.
+                for (i = 0; i < s.length; i++) {
+                    // Check that current character isn't whitespace.
+                    var c = s.charAt(i);
+                    if (c != " ") returnString += c;
+                }
+                return returnString;
+            }
+            function stripCharsInBag(s, bag) {
+                var i;
+                var returnString = "";
+                // Search through string's characters one by one.
+                // If character is not in bag, append to returnString.
+                for (i = 0; i < s.length; i++) {
+                    // Check that current character isn't whitespace.
+                    var c = s.charAt(i);
+                    if (bag.indexOf(c) == -1) returnString += c;
+                }
+                return returnString;
+            }
 
-	if ((Name1.value==null)||(Name1.value=="")){
-		alert("Please Enter your city")
-		Name1.focus()
-		return false
-	}
-if(document.myForm.destination.selectedIndex==0)
-{ alert("Please select your Destination");
-document.myForm.destination.focus();
-return false;
-}
+            function checkInternationalPhone(strPhone) {
+                var bracket = 3
+                strPhone = trim(strPhone)
+                if (strPhone.indexOf("+") > 1) return false
+                if (strPhone.indexOf("-") != -1) bracket = bracket + 1
+                if (strPhone.indexOf("(") != -1 && strPhone.indexOf("(") > bracket) return false
+                var brchr = strPhone.indexOf("(")
+                if (strPhone.indexOf("(") != -1 && strPhone.charAt(brchr + 2) != ")") return false
+                if (strPhone.indexOf("(") == -1 && strPhone.indexOf(")") != -1) return false
+                s = stripCharsInBag(strPhone, validWorldPhoneChars);
+                return (isInteger(s) && s.length >= minDigitsInIPhoneNumber);
+            }
 
-	return true
+            var Name = document.myForm.name
+
+            if ((Name.value == null) || (Name.value == "")) {
+                alert("Please Enter your Name")
+                Name.focus()
+                return false
+            }
+
+
+            var x = document.forms["myForm"]["email"].value;
+            if (x == "") {
+                alert("Email must be filled out");
+                document.myForm.email.focus();
+                return false;
+            }
+            var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+                alert("Not a valid e-mail address");
+                document.myForm.email.focus();
+                return false;
+            }
 
 
 
 
-	
-}
+            var Phone = document.myForm.phone
+
+            if ((Phone.value == null) || (Phone.value == "")) {
+                alert("Please Enter your Phone Number")
+                Phone.focus()
+                return false
+            }
+            if (checkInternationalPhone(Phone.value) == false) {
+                alert("Please Enter a Valid Phone Number")
+
+                Phone.focus()
+                return false
+            }
+
+            var Name1 = document.myForm.city
+
+            if ((Name1.value == null) || (Name1.value == "")) {
+                alert("Please Enter your city")
+                Name1.focus()
+                return false
+            }
+            if (document.myForm.destination.selectedIndex == 0) {
+                alert("Please select your Destination");
+                document.myForm.destination.focus();
+                return false;
+            }
+
+            return true
+
+
+
+
+
+        }
     </script>
     <script>
-function validateFormm() {
-	
-	
-	  var digits = "0123456789";
-// non-digit characters which are allowed in phone numbers
-var phoneNumberDelimiters = "()- ";
-// characters which are allowed in international phone numbers
-// (a leading + is OK)
-var validWorldPhoneChars = phoneNumberDelimiters + "+";
-// Minimum no of digits in an international phone no.
-var minDigitsInIPhoneNumber = 10;
-
-function isInteger(s)
-{   var i;
-    for (i = 0; i < s.length; i++)
-    {   
-        // Check that current character is number.
-        var c = s.charAt(i);
-        if (((c < "0") || (c > "9"))) return false;
-    }
-    // All characters are numbers.
-    return true;
-}
-function trim(s)
-{   var i;
-    var returnString = "";
-    // Search through string's characters one by one.
-    // If character is not a whitespace, append to returnString.
-    for (i = 0; i < s.length; i++)
-    {   
-        // Check that current character isn't whitespace.
-        var c = s.charAt(i);
-        if (c != " ") returnString += c;
-    }
-    return returnString;
-}
-function stripCharsInBag(s, bag)
-{   var i;
-    var returnString = "";
-    // Search through string's characters one by one.
-    // If character is not in bag, append to returnString.
-    for (i = 0; i < s.length; i++)
-    {   
-        // Check that current character isn't whitespace.
-        var c = s.charAt(i);
-        if (bag.indexOf(c) == -1) returnString += c;
-    }
-    return returnString;
-}
-
-function checkInternationalPhone(strPhone){
-var bracket=3
-strPhone=trim(strPhone)
-if(strPhone.indexOf("+")>1) return false
-if(strPhone.indexOf("-")!=-1)bracket=bracket+1
-if(strPhone.indexOf("(")!=-1 && strPhone.indexOf("(")>bracket)return false
-var brchr=strPhone.indexOf("(")
-if(strPhone.indexOf("(")!=-1 && strPhone.charAt(brchr+2)!=")")return false
-if(strPhone.indexOf("(")==-1 && strPhone.indexOf(")")!=-1)return false
-s=stripCharsInBag(strPhone,validWorldPhoneChars);
-return (isInteger(s) && s.length >= minDigitsInIPhoneNumber);
-}
-
-var Name=document.myFormm.name
-	
-	if ((Name.value==null)||(Name.value=="")){
-		alert("Please Enter your Name")
-		Name.focus()
-		return false
-	}
-   
-
-	 var x = document.forms["myFormm"]["email"].value;
-	 if (x == "") {
-        alert("Email must be filled out");
-	document.myFormm.email.focus();
-        return false;
-    }
-    var atpos = x.indexOf("@");
-    var dotpos = x.lastIndexOf(".");
-    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-        alert("Not a valid e-mail address");
-		document.myFormm.email.focus();
-        return false;
-    }
-	
+        function validateFormm() {
 
 
+            var digits = "0123456789";
+            // non-digit characters which are allowed in phone numbers
+            var phoneNumberDelimiters = "()- ";
+            // characters which are allowed in international phone numbers
+            // (a leading + is OK)
+            var validWorldPhoneChars = phoneNumberDelimiters + "+";
+            // Minimum no of digits in an international phone no.
+            var minDigitsInIPhoneNumber = 10;
 
-	var Phone=document.myFormm.phone
-	
-	if ((Phone.value==null)||(Phone.value=="")){
-		alert("Please Enter your Phone Number")
-		Phone.focus()
-		return false
-	}
-	if (checkInternationalPhone(Phone.value)==false){
-		alert("Please Enter a Valid Phone Number")
-	
-		Phone.focus()
-		return false
-	}
-	
-		var Name1=document.myFormm.city
+            function isInteger(s) {
+                var i;
+                for (i = 0; i < s.length; i++) {
+                    // Check that current character is number.
+                    var c = s.charAt(i);
+                    if (((c < "0") || (c > "9"))) return false;
+                }
+                // All characters are numbers.
+                return true;
+            }
+            function trim(s) {
+                var i;
+                var returnString = "";
+                // Search through string's characters one by one.
+                // If character is not a whitespace, append to returnString.
+                for (i = 0; i < s.length; i++) {
+                    // Check that current character isn't whitespace.
+                    var c = s.charAt(i);
+                    if (c != " ") returnString += c;
+                }
+                return returnString;
+            }
+            function stripCharsInBag(s, bag) {
+                var i;
+                var returnString = "";
+                // Search through string's characters one by one.
+                // If character is not in bag, append to returnString.
+                for (i = 0; i < s.length; i++) {
+                    // Check that current character isn't whitespace.
+                    var c = s.charAt(i);
+                    if (bag.indexOf(c) == -1) returnString += c;
+                }
+                return returnString;
+            }
 
-	if ((Name1.value==null)||(Name1.value=="")){
-		alert("Please Enter your city")
-		Name1.focus()
-		return false
-	}
-if(document.myFormm.destination.selectedIndex==0)
-{ alert("Please select your Destination");
-document.myFormm.destination.focus();
-return false;
-}
+            function checkInternationalPhone(strPhone) {
+                var bracket = 3
+                strPhone = trim(strPhone)
+                if (strPhone.indexOf("+") > 1) return false
+                if (strPhone.indexOf("-") != -1) bracket = bracket + 1
+                if (strPhone.indexOf("(") != -1 && strPhone.indexOf("(") > bracket) return false
+                var brchr = strPhone.indexOf("(")
+                if (strPhone.indexOf("(") != -1 && strPhone.charAt(brchr + 2) != ")") return false
+                if (strPhone.indexOf("(") == -1 && strPhone.indexOf(")") != -1) return false
+                s = stripCharsInBag(strPhone, validWorldPhoneChars);
+                return (isInteger(s) && s.length >= minDigitsInIPhoneNumber);
+            }
 
-	return true
+            var Name = document.myFormm.name
+
+            if ((Name.value == null) || (Name.value == "")) {
+                alert("Please Enter your Name")
+                Name.focus()
+                return false
+            }
+
+
+            var x = document.forms["myFormm"]["email"].value;
+            if (x == "") {
+                alert("Email must be filled out");
+                document.myFormm.email.focus();
+                return false;
+            }
+            var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+                alert("Not a valid e-mail address");
+                document.myFormm.email.focus();
+                return false;
+            }
 
 
 
 
-	
-}
+            var Phone = document.myFormm.phone
+
+            if ((Phone.value == null) || (Phone.value == "")) {
+                alert("Please Enter your Phone Number")
+                Phone.focus()
+                return false
+            }
+            if (checkInternationalPhone(Phone.value) == false) {
+                alert("Please Enter a Valid Phone Number")
+
+                Phone.focus()
+                return false
+            }
+
+            var Name1 = document.myFormm.city
+
+            if ((Name1.value == null) || (Name1.value == "")) {
+                alert("Please Enter your city")
+                Name1.focus()
+                return false
+            }
+            if (document.myFormm.destination.selectedIndex == 0) {
+                alert("Please select your Destination");
+                document.myFormm.destination.focus();
+                return false;
+            }
+
+            return true
+
+
+
+
+
+        }
     </script>
     <script>
-function validateFormpop() {
-	
-	
-	  var digits = "0123456789";
-// non-digit characters which are allowed in phone numbers
-var phoneNumberDelimiters = "()- ";
-// characters which are allowed in international phone numbers
-// (a leading + is OK)
-var validWorldPhoneChars = phoneNumberDelimiters + "+";
-// Minimum no of digits in an international phone no.
-var minDigitsInIPhoneNumber = 10;
-
-function isInteger(s)
-{   var i;
-    for (i = 0; i < s.length; i++)
-    {   
-        // Check that current character is number.
-        var c = s.charAt(i);
-        if (((c < "0") || (c > "9"))) return false;
-    }
-    // All characters are numbers.
-    return true;
-}
-function trim(s)
-{   var i;
-    var returnString = "";
-    // Search through string's characters one by one.
-    // If character is not a whitespace, append to returnString.
-    for (i = 0; i < s.length; i++)
-    {   
-        // Check that current character isn't whitespace.
-        var c = s.charAt(i);
-        if (c != " ") returnString += c;
-    }
-    return returnString;
-}
-function stripCharsInBag(s, bag)
-{   var i;
-    var returnString = "";
-    // Search through string's characters one by one.
-    // If character is not in bag, append to returnString.
-    for (i = 0; i < s.length; i++)
-    {   
-        // Check that current character isn't whitespace.
-        var c = s.charAt(i);
-        if (bag.indexOf(c) == -1) returnString += c;
-    }
-    return returnString;
-}
-
-function checkInternationalPhone(strPhone){
-var bracket=3
-strPhone=trim(strPhone)
-if(strPhone.indexOf("+")>1) return false
-if(strPhone.indexOf("-")!=-1)bracket=bracket+1
-if(strPhone.indexOf("(")!=-1 && strPhone.indexOf("(")>bracket)return false
-var brchr=strPhone.indexOf("(")
-if(strPhone.indexOf("(")!=-1 && strPhone.charAt(brchr+2)!=")")return false
-if(strPhone.indexOf("(")==-1 && strPhone.indexOf(")")!=-1)return false
-s=stripCharsInBag(strPhone,validWorldPhoneChars);
-return (isInteger(s) && s.length >= minDigitsInIPhoneNumber);
-}
-
-var Name=document.myFormpop.name
-	
-	if ((Name.value==null)||(Name.value=="")){
-		alert("Please Enter your Name")
-		Name.focus()
-		return false
-	}
-   
-
-	 var x = document.forms["myFormpop"]["email"].value;
-	 if (x == "") {
-        alert("Email must be filled out");
-	document.myFormpop.email.focus();
-        return false;
-    }
-    var atpos = x.indexOf("@");
-    var dotpos = x.lastIndexOf(".");
-    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-        alert("Not a valid e-mail address");
-		document.myFormpop.email.focus();
-        return false;
-    }
-	
+        function validateFormpop() {
 
 
+            var digits = "0123456789";
+            // non-digit characters which are allowed in phone numbers
+            var phoneNumberDelimiters = "()- ";
+            // characters which are allowed in international phone numbers
+            // (a leading + is OK)
+            var validWorldPhoneChars = phoneNumberDelimiters + "+";
+            // Minimum no of digits in an international phone no.
+            var minDigitsInIPhoneNumber = 10;
 
-	var Phone=document.myFormpop.phone
-	
-	if ((Phone.value==null)||(Phone.value=="")){
-		alert("Please Enter your Phone Number")
-		Phone.focus()
-		return false
-	}
-	if (checkInternationalPhone(Phone.value)==false){
-		alert("Please Enter a Valid Phone Number")
-	
-		Phone.focus()
-		return false
-	}
-	
-		var Name1=document.myFormpop.city
+            function isInteger(s) {
+                var i;
+                for (i = 0; i < s.length; i++) {
+                    // Check that current character is number.
+                    var c = s.charAt(i);
+                    if (((c < "0") || (c > "9"))) return false;
+                }
+                // All characters are numbers.
+                return true;
+            }
+            function trim(s) {
+                var i;
+                var returnString = "";
+                // Search through string's characters one by one.
+                // If character is not a whitespace, append to returnString.
+                for (i = 0; i < s.length; i++) {
+                    // Check that current character isn't whitespace.
+                    var c = s.charAt(i);
+                    if (c != " ") returnString += c;
+                }
+                return returnString;
+            }
+            function stripCharsInBag(s, bag) {
+                var i;
+                var returnString = "";
+                // Search through string's characters one by one.
+                // If character is not in bag, append to returnString.
+                for (i = 0; i < s.length; i++) {
+                    // Check that current character isn't whitespace.
+                    var c = s.charAt(i);
+                    if (bag.indexOf(c) == -1) returnString += c;
+                }
+                return returnString;
+            }
 
-	if ((Name1.value==null)||(Name1.value=="")){
-		alert("Please Enter your city")
-		Name1.focus()
-		return false
-	}
-if(document.myFormpop.destination.selectedIndex==0)
-{ alert("Please select your Destination");
-document.myFormpop.destination.focus();
-return false;
-}
+            function checkInternationalPhone(strPhone) {
+                var bracket = 3
+                strPhone = trim(strPhone)
+                if (strPhone.indexOf("+") > 1) return false
+                if (strPhone.indexOf("-") != -1) bracket = bracket + 1
+                if (strPhone.indexOf("(") != -1 && strPhone.indexOf("(") > bracket) return false
+                var brchr = strPhone.indexOf("(")
+                if (strPhone.indexOf("(") != -1 && strPhone.charAt(brchr + 2) != ")") return false
+                if (strPhone.indexOf("(") == -1 && strPhone.indexOf(")") != -1) return false
+                s = stripCharsInBag(strPhone, validWorldPhoneChars);
+                return (isInteger(s) && s.length >= minDigitsInIPhoneNumber);
+            }
 
-	return true
+            var Name = document.myFormpop.name
+
+            if ((Name.value == null) || (Name.value == "")) {
+                alert("Please Enter your Name")
+                Name.focus()
+                return false
+            }
+
+
+            var x = document.forms["myFormpop"]["email"].value;
+            if (x == "") {
+                alert("Email must be filled out");
+                document.myFormpop.email.focus();
+                return false;
+            }
+            var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+                alert("Not a valid e-mail address");
+                document.myFormpop.email.focus();
+                return false;
+            }
 
 
 
 
-	
-}
+            var Phone = document.myFormpop.phone
+
+            if ((Phone.value == null) || (Phone.value == "")) {
+                alert("Please Enter your Phone Number")
+                Phone.focus()
+                return false
+            }
+            if (checkInternationalPhone(Phone.value) == false) {
+                alert("Please Enter a Valid Phone Number")
+
+                Phone.focus()
+                return false
+            }
+
+            var Name1 = document.myFormpop.city
+
+            if ((Name1.value == null) || (Name1.value == "")) {
+                alert("Please Enter your city")
+                Name1.focus()
+                return false
+            }
+            if (document.myFormpop.destination.selectedIndex == 0) {
+                alert("Please select your Destination");
+                document.myFormpop.destination.focus();
+                return false;
+            }
+
+            return true
+
+
+
+
+
+        }
     </script>
-    <script type="text/javascript">
-var google_tag_params = {
-travel_destid: 'REPLACE_WITH_VALUE',
-travel_originid: 'REPLACE_WITH_VALUE',
-travel_startdate: 'REPLACE_WITH_VALUE',
-travel_enddate: 'REPLACE_WITH_VALUE',
-travel_pagetype: 'REPLACE_WITH_VALUE',
-travel_totalvalue: 'REPLACE_WITH_VALUE',
-};
-    </script>
+
 </body>
+
 </html>

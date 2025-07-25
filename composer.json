@@ -3,7 +3,7 @@
     "description": "Landing page for brolion tourism",
     "autoload": {
         "psr-4": {
-            "Brolion\\Landing\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [
