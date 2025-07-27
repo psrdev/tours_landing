@@ -17,7 +17,7 @@ $all_data = $repo->all();
     <meta name="description"
         content="Book cheapest Holidays packages from Brolion Tourism Pvt Ltd, and Get 30% Each Booking your Tour Packages ">
     <meta name="keywords"
-        content="Holidays Packages, Tour Package Booking, Cheapest Holidays Packages Booing, Book your Holidays Trips, ">
+        content="Holidays Packages, Tour Package Booking, Cheapest Holidays Packages Booking, Book your Holidays Trips, ">
     <meta name="robots" content="index, follow, noodp">
     <meta name="page-topic" content=" BrolionTourism Pvt Ltd">
     <meta name="Copyright" content="BrolionTourism">
@@ -42,7 +42,7 @@ $all_data = $repo->all();
         <header>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 my-auto">
                         <div class="logo">
                             <img src="images/logo.png" alt="" class="ing-fluid">
                         </div>
@@ -350,9 +350,9 @@ $all_data = $repo->all();
                                 <div class="price-tag">
                                     <div class="price">
                                         <small>
-                                            <i class="fa fa-rupee"></i> 14,400
+                                            <i class="fa fa-rupee"></i> <?php echo number_format(round($pack['price'] * 1.3)) ?>
                                         </small>
-                                        <i class="fa fa-rupee"></i> 13,899 Onwards
+                                        <i class="fa fa-rupee"></i> <?php echo number_format(round($pack['price'])) ?> Onwards
                                     </div>
                                     <div class="btn-detail">
                                         <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
