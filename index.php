@@ -15,12 +15,7 @@ $router->get('/', function () {
     return ob_get_clean();
 });
 
-$router->get('/about', function () {
-    ob_start();
-    $title = "About Us";
-    include __DIR__ . '/src/views/about.php';
-    return ob_get_clean();
-});
+
 
 $router->post('/contact', function () {
     // Handle form submission

@@ -15,7 +15,7 @@ $all_data = $repo->all();
     <meta name="author" content="webThemez.com">
     <title>Brolion Airway | Brolion Tour Package Booking | Brolion Holidays Booking</title>
     <meta name="description"
-        content="Book cheapest Holidays packages from FLYSAFIA Airways Pvt Ltd, and Get 30% Each Booking your Tour Packages ">
+        content="Book cheapest Holidays packages from Brolion Tourism Pvt Ltd, and Get 30% Each Booking your Tour Packages ">
     <meta name="keywords"
         content="Holidays Packages, Tour Package Booking, Cheapest Holidays Packages Booing, Book your Holidays Trips, ">
     <meta name="robots" content="index, follow, noodp">
@@ -61,7 +61,7 @@ $all_data = $repo->all();
                                     <i>
                                         <img src="images/call-ico.png" alt="">
                                     </i>
-                                    <a href="tel:+917566000147">+91 7566000147</a>
+                                    <a href="tel:+917566000147">+91-7566000147</a>
                                 </li>
                                 <li>
                                     <i>
@@ -262,783 +262,116 @@ $all_data = $repo->all();
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="packages">
-                        <figure>
-                            <div class="overlay"></div>
-                            <img src="images/image-1.jpg" alt="" class="img-fluid">
-                            <div class="tag">20% OFF</div>
-                            <div class="budget">
-                                <img src="images/budget.png" alt="" class="img-fluid">
-                            </div>
-                            <div class="all-free">
-                                <img src="images/all-free.png" alt="" class="img-fluid">
-                            </div>
-                            <div class="special-honymoon">
-                                <p>
-                                    wine bottle, bed of roses + a candle light
-                                    dinner with honeymoon cake
-                                </p>
-                            </div>
-                        </figure>
-                        <h2>Shimla Manali Honeymoon Tour Packages</h2>
-                        <h3>5N/6D /
-                            <span>2N Shimla, 3N Manali</span>
-                        </h3>
-                        <ul class="itnry">
-                            <li class="active">
+                <?php foreach ($all_data as $dest) {
+                    foreach ($dest['packages'] as $pack) {
+                        ?>
+                        <div class="col-md-4">
+                            <div class="packages">
                                 <figure>
-                                    <img src="images/flight-icon.png" alt="" class="img-fluid">
+                                    <div class="overlay"></div>
+                                    <img src="images/packages/<?php echo $pack['image'] ?>" alt="" class="img-fluid">
+                                    <div class="tag">30% OFF</div>
+                                    <div class="budget">
+                                        <img src="images/popular.png" alt="" class="img-fluid">
+                                    </div>
+                                    <!-- <div class="all-free">
+                                        <img src="images/all-free.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="special-honymoon">
+                                        <p>
+                                            wine bottle, bed of roses + a candle light
+                                            dinner with honeymoon cake
+                                        </p>
+                                    </div> -->
                                 </figure>
-                                <p>Flight</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/hotel-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Hotels</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/Sightseeing-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Sightseeing</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/meals-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Meals</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/transfer-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Transfers</p>
-                            </li>
-                        </ul>
-                        <div class="inclusions">
-                            <h5>Destinations Covered:</h5>
-                            <ul class="pkg-incusion">
-                                <li>Delhi - Kullu - Manali - Shimla - Delhi</li>
-                                <li>Kullu Manali</li>
-                            </ul>
-                            <div class="collapse" id="collapseExample">
-                                <ul class="pkg-incusion">
-                                    <li>Rohtang pass up to possible or Solang Valley</li>
-                                    <li>Hidimba Temple in Manali</li>
-                                    <li>Vishisht Temple in Manali</li>
-                                    <li>Van Vihar in Manali</li>
-                                    <li>Tibetan Monastery</li>
-                                    <li>Club house and Manikaran in Manali</li>
-                                    <li>Kufri, Green valley</li>
-                                    <li>Indira tourist park, Himalayan Nature park</li>
-                                    <li>Fagu valley in Shimla</li>
+                                <h2><?php echo $pack['title'] ?></h2>
+                                <h3> <?php echo $pack['duration'] ?>
+
+                                </h3>
+                                <ul class="itnry">
+                                    <li class="active">
+                                        <figure>
+                                            <img src="images/flight-icon.png" alt="" class="img-fluid">
+                                        </figure>
+                                        <p>Flight</p>
+                                    </li>
+                                    <li>
+                                        <figure>
+                                            <img src="images/hotel-icon.png" alt="" class="img-fluid">
+                                        </figure>
+                                        <p>Hotels</p>
+                                    </li>
+                                    <li>
+                                        <figure>
+                                            <img src="images/Sightseeing-icon.png" alt="" class="img-fluid">
+                                        </figure>
+                                        <p>Sightseeing</p>
+                                    </li>
+                                    <li>
+                                        <figure>
+                                            <img src="images/meals-icon.png" alt="" class="img-fluid">
+                                        </figure>
+                                        <p>Meals</p>
+                                    </li>
+                                    <li>
+                                        <figure>
+                                            <img src="images/transfer-icon.png" alt="" class="img-fluid">
+                                        </figure>
+                                        <p>Transfers</p>
+                                    </li>
                                 </ul>
-                            </div>
-                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample" role="button"
-                                aria-expanded="false" aria-controls="collapseExample">
-                                <span>Read More</span>
-                                <i>Close</i>
-                            </a>
-                        </div>
-                        <div class="price-tag">
-                            <div class="price">
-                                <small>
-                                    <i class="fa fa-rupee"></i> 14,400
-                                </small>
-                                <i class="fa fa-rupee"></i> 13,899 Onwards
-                            </div>
-                            <div class="btn-detail">
-                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
-                                    Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="packages">
-                        <figure>
-                            <img src="images/image-6.jpg" alt="" class="img-fluid">
-                            <div class="tag">25% OFF</div>
-                            <div class="budget">
-                                <img src="images/popular.png" alt="" class="img-fluid">
-                            </div>
-                        </figure>
-                        <h2>Manali Volvo Tour Packages</h2>
-                        <h3>3N/4D /
-                            <span>3 Nights in Manali</span>
-                        </h3>
-                        <ul class="itnry">
-                            <li class="active">
-                                <figure>
-                                    <img src="images/flight-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Flight</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/hotel-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Hotels</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/Sightseeing-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Sightseeing</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/meals-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Meals</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/transfer-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Transfers</p>
-                            </li>
-                        </ul>
-                        <div class="inclusions">
-                            <h5>Destinations Covered:</h5>
-                            <ul class="pkg-incusion">
-                                <li>Delhi - Kullu - Manali - Delhi</li>
-                                <li>Kullu Sightseeing</li>
-                            </ul>
-                            <div class="collapse" id="collapseExample6">
-                                <ul class="pkg-incusion">
-                                    <li>Local Manali Sightseeing</li>
-                                    <li>Rohtang pass up to possible or Solang Valley</li>
-                                    <li>Hidimba Temple in Manali</li>
-                                    <li>Vishisht Temple in Manali</li>
-                                    <li>Fabulous Van Vihar</li>
-                                    <li>Tibetan Monastery</li>
-                                    <li>Club house</li>
-                                    <li>Manikaran in Kullu Manali</li>
-                                </ul>
-                            </div>
-                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample6" role="button"
-                                aria-expanded="false" aria-controls="collapseExample6">
-                                <span>Read More</span>
-                                <i>Close</i>
-                            </a>
-                        </div>
-                        <div class="price-tag">
-                            <div class="price">
-                                <small>
-                                    <i class="fa fa-rupee"></i> 10,499
-                                </small>
-                                <i class="fa fa-rupee"></i> 7,399 Onwards
-                            </div>
-                            <div class="btn-detail">
-                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
-                                    Free Quote</a>
+                                <div class="inclusions">
+                                    <h5>Highlights:</h5>
+                                    <ul class="pkg-incusion">
+                                        <?php foreach ($pack['highlights'] as $high) { ?>
+
+                                            <li><?php echo $high ?></li>
+
+                                        <?php } ?>
+
+
+                                    </ul>
+                                    <div class="collapse" id="<?php echo $pack['slug'] ?>">
+                                        <h5 class="pt-2">Transportation:</h5>
+                                        <ul class="pkg-incusion">
+                                            <?php foreach ($pack['transportation'] as $trans) { ?>
+
+                                                <li><?php echo $trans ?></li>
+
+                                            <?php } ?>
+                                        </ul>
+                                    </div>
+                                    <a class="read-collpse" data-toggle="collapse" href="#<?php echo $pack['slug'] ?>"
+                                        role="button" aria-expanded="false" aria-controls="<?php echo $pack['slug'] ?>">
+                                        <span>Read More</span>
+                                        <i>Close</i>
+                                    </a>
+                                </div>
+                                <div class="price-tag">
+                                    <div class="price">
+                                        <small>
+                                            <i class="fa fa-rupee"></i> 14,400
+                                        </small>
+                                        <i class="fa fa-rupee"></i> 13,899 Onwards
+                                    </div>
+                                    <div class="btn-detail">
+                                        <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
+                                            Free Quote</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="packages">
-                        <figure>
-                            <img src="images/image-3.jpg" alt="" class="img-fluid">
-                            <div class="tag">25% OFF</div>
-                            <div class="budget">
-                                <img src="images/budget.png" alt="" class="img-fluid">
-                            </div>
-                        </figure>
-                        <h2>Shimla Manali Tour Package</h2>
-                        <h3>5N/6D /
-                            <span>02 Nights Shimla, 03 Nights Manali</span>
-                        </h3>
-                        <ul class="itnry">
-                            <li class="active">
-                                <figure>
-                                    <img src="images/flight-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Flight</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/hotel-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Hotels</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/Sightseeing-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Sightseeing</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/meals-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Meals</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/transfer-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Transfers</p>
-                            </li>
-                        </ul>
-                        <div class="inclusions">
-                            <h5>Destinations Covered:</h5>
-                            <ul class="pkg-incusion">
-                                <li>Delhi - Manali - Shimla - Delhi</li>
-                                <li>Local Manali Sightseeing</li>
-                            </ul>
-                            <div class="collapse" id="collapseExample3">
-                                <ul class="pkg-incusion">
-                                    <li>Rohtang pass up to possible or Solang Valley</li>
-                                    <li>Hidimba Devi Temple</li>
-                                    <li>Famous Vishisht Temple in Manali</li>
-                                    <li>Attraction Point Van Vihar</li>
-                                    <li>Tibetan Monastery & Club House</li>
-                                    <li>Kullu Manikaran Saheb</li>
-                                    <li>Kufri, Green valley & Indira tourist park</li>
-                                    <li>Himalayan Nature park</li>
-                                </ul>
-                            </div>
-                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample3" role="button"
-                                aria-expanded="false" aria-controls="collapseExample3">
-                                <span>Read More</span>
-                                <i>Close</i>
-                            </a>
-                        </div>
-                        <div class="price-tag">
-                            <div class="price">
-                                <small>
-                                    <i class="fa fa-rupee"></i> 17,999
-                                </small>
-                                <i class="fa fa-rupee"></i> 11,399 Onwards
-                            </div>
-                            <div class="btn-detail">
-                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
-                                    Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
+
+                    <?php }
+
+                } ?>
+
+
             </div>
             <hr>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="packages">
-                        <figure>
-                            <img src="images/amarnath-tour-apckge.jpg" alt="" class="img-fluid">
-                            <div class="tag">40% OFF</div>
-                            <div class="budget">
-                                <img src="images/popular.png" alt="" class="img-fluid">
-                            </div>
-                        </figure>
-                        <h2>Amaranth Tour Package</h2>
-                        <h3>3N/4D /
-                            <span>Sonamarg - Neelgrat/Baltal - Holy Amarnath Cave - Nishat Garden - Shalimar
-                                Garden</span>
-                        </h3>
-                        <ul class="itnry">
-                            <li class="active">
-                                <figure>
-                                    <img src="images/flight-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Flight</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/hotel-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Hotels</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/Sightseeing-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Sightseeing</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/meals-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Meals</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/transfer-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Transfers</p>
-                            </li>
-                        </ul>
-                        <div class="inclusions">
-                            <h5>Destinations Covered:</h5>
-                            <ul class="pkg-incusion">
-                                <li>Sonamarg - Neelgrat/Baltal - Holy Amarnath Cave - Nishat Garden - Shalimar Garden
-                                </li>
-                            </ul>
-                            <div class="collapse" id="collapseExample4">
-                                <ul class="pkg-incusion">
-                                    <li>Srinagar</li>
-                                    <li>Panchtarni</li>
-                                    <li>Dal lake</li>
-                                    <li>Nishat bagh</li>
-                                    <li>Mugal garden of srinagar</li>
-                                </ul>
-                            </div>
-                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample4" role="button"
-                                aria-expanded="false" aria-controls="collapseExample4">
-                                <span>Read More</span>
-                                <i>Close</i>
-                            </a>
-                        </div>
-                        <div class="price-tag">
-                            <div class="price">
-                                <small>
-                                    <i class="fa fa-rupee"></i> 15,499
-                                </small>
-                                <i class="fa fa-rupee"></i> 11,800 Onwards
-                            </div>
-                            <div class="btn-detail">
-                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
-                                    Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="packages">
-                        <figure>
-                            <img src="images/andmaan-tour-package.jpg" alt="" class="img-fluid">
-                            <div class="tag">50% OFF</div>
-                            <div class="budget">
-                                <img src="images/popular.png" alt="" class="img-fluid">
-                            </div>
-                        </figure>
-                        <h2>Andmaan Tour Package</h2>
-                        <h3>5N/6D /
-                            <span>Port Blair(1N) - Havelock Island(1N) - Port Blair (3N)</span>
-                        </h3>
-                        <ul class="itnry">
-                            <li class="active">
-                                <figure>
-                                    <img src="images/flight-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Flight</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/hotel-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Hotels</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/Sightseeing-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Sightseeing</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/meals-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Meals</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/transfer-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Transfers</p>
-                            </li>
-                        </ul>
-                        <div class="inclusions">
-                            <h5>Destinations Covered:</h5>
-                            <ul class="pkg-incusion">
-                                <li>Port Blair - Havelock Island - Port Blair</li>
-                            </ul>
-                            <div class="collapse" id="collapseExample5">
-                                <ul class="pkg-incusion">
-                                    <li>Sound and Light Show at Cellular Jail</li>
-                                    <li>Port Blair</li>
-                                    <li>Havelock Island</li>
-                                    <li>Beach No 7</li>
-                                    <li>Port Blair City Tour</li>
-                                    <li>Chidyatapu (Sunset Point)</li>
-                                    <li>Ross Island</li>
-                                    <li>Water Sports Complex</li>
-                                </ul>
-                            </div>
-                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample5" role="button"
-                                aria-expanded="false" aria-controls="collapseExample5">
-                                <span>Read More</span>
-                                <i>Close</i>
-                            </a>
-                        </div>
-                        <div class="price-tag">
-                            <div class="price">
-                                <small>
-                                    <i class="fa fa-rupee"></i> 18,999
-                                </small>
-                                <i class="fa fa-rupee"></i> 11,999 Onwards
-                            </div>
-                            <div class="btn-detail">
-                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
-                                    Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="packages">
-                        <figure>
-                            <img src="images/kerala-tour-package.jpg" alt="" class="img-fluid">
-                            <div class="tag">20% OFF</div>
-                            <div class="budget">
-                                <img src="images/budget.png" alt="" class="img-fluid">
-                            </div>
-                        </figure>
-                        <h2>Kerala Tour Package</h2>
-                        <h3>4N/5D /
-                            <span> 2N Munnar - 1N Thekkady - 1N Alleppey</span>
-                        </h3>
-                        <ul class="itnry">
-                            <li class="active">
-                                <figure>
-                                    <img src="images/flight-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Flight</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/hotel-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Hotels</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/Sightseeing-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Sightseeing</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/meals-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Meals</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/transfer-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Transfers</p>
-                            </li>
-                        </ul>
-                        <div class="inclusions">
-                            <h5>Destinations Covered:</h5>
-                            <ul class="pkg-incusion">
-                                <li>Kerala - Munnar - Thekkady and Alleppey</li>
-                            </ul>
-                            <div class="collapse" id="collapseExample2">
-                                <ul class="pkg-incusion">
-                                    <li>Cochin</li>
-                                    <li>Munnar</li>
-                                    <li>Eravikulam National Park</li>
-                                    <li>Mattupetty Dam</li>
-                                    <li>Old Munnar Town</li>
-                                    <li>Town market</li>
-                                    <li>Thekkady</li>
-                                    <li>Periyar Wildlife Sanctuary</li>
-                                    <li>Alleppey</li>
-                                    <li>Cruise-optional</li>
-                                </ul>
-                            </div>
-                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample2" role="button"
-                                aria-expanded="false" aria-controls="collapseExample2">
-                                <span>Read More</span>
-                                <i>Close</i>
-                            </a>
-                        </div>
-                        <div class="price-tag">
-                            <div class="price">
-                                <small>
-                                    <i class="fa fa-rupee"></i> 10,999
-                                </small>
-                                <i class="fa fa-rupee"></i> 7,299 Onwards
-                            </div>
-                            <div class="btn-detail">
-                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
-                                    Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="packages">
-                        <figure>
-                            <img src="images/goa-tour-package.jpg" alt="" class="img-fluid">
-                            <div class="tag">40% OFF</div>
-                            <div class="budget">
-                                <img src="images/popular.png" alt="" class="img-fluid">
-                            </div>
-                        </figure>
-                        <h2>Goa Tour Package</h2>
-                        <h3>3N/4D /
-                            <span>1N Goa - 1N South Goa - 1N North Goa</span>
-                        </h3>
-                        <ul class="itnry">
-                            <li class="active">
-                                <figure>
-                                    <img src="images/flight-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Flight</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/hotel-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Hotels</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/Sightseeing-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Sightseeing</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/meals-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Meals</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/transfer-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Transfers</p>
-                            </li>
-                        </ul>
-                        <div class="inclusions">
-                            <h5>Destinations Covered:</h5>
-                            <ul class="pkg-incusion">
-                                <li>1N Goa - 1N South Goa - 1N North Goa</li>
-                            </ul>
-                            <div class="collapse" id="collapseExample7">
-                                <ul class="pkg-incusion">
-                                    <li> Beaches</li>
-                                    <li>Nightlife</li>
-                                    <li>Miramar Beach</li>
-                                    <li>Dona Paula bay</li>
-                                    <li>Se Cathedral</li>
-                                    <li>Calangute Beach</li>
-                                    <li>Baga Beach</li>
-                                    <li>Fort Aguada</li>
-                                    <li>Beach Tour at last day</li>
-                                </ul>
-                            </div>
-                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample7" role="button"
-                                aria-expanded="false" aria-controls="collapseExample4">
-                                <span>Read More</span>
-                                <i>Close</i>
-                            </a>
-                        </div>
-                        <div class="price-tag">
-                            <div class="price">
-                                <small>
-                                    <i class="fa fa-rupee"></i> 10,499
-                                </small>
-                                <i class="fa fa-rupee"></i> 7,111 Onwards
-                            </div>
-                            <div class="btn-detail">
-                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
-                                    Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="packages">
-                        <figure>
-                            <img src="images/ladaakh-tour-package.jpg" alt="" class="img-fluid">
-                            <div class="tag">50% OFF</div>
-                            <div class="budget">
-                                <img src="images/popular.png" alt="" class="img-fluid">
-                            </div>
-                        </figure>
-                        <h2>Surreal Ladakh Holiday Package</h2>
-                        <h3>5N/6D /
-                            <span>Leh(2N) - Nubra Valley(1N) - Leh(2N)</span>
-                        </h3>
-                        <ul class="itnry">
-                            <li class="active">
-                                <figure>
-                                    <img src="images/flight-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Flight</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/hotel-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Hotels</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/Sightseeing-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Sightseeing</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/meals-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Meals</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/transfer-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Transfers</p>
-                            </li>
-                        </ul>
-                        <div class="inclusions">
-                            <h5>Destinations Covered:</h5>
-                            <ul class="pkg-incusion">
-                                <li>Leh - Nubra Valley - Pangong - Leh</li>
-                            </ul>
-                            <div class="collapse" id="collapseExample8">
-                                <ul class="pkg-incusion">
-                                    <li>Leh</li>
-                                    <li>Leh Market</li>
-                                    <li>Lachen Palkhar</li>
-                                    <li>Shanti Stupa</li>
-                                    <li>Pathar Sahib Gurudwara</li>
-                                    <li>Magnetic Hill</li>
-                                    <li>Sangam</li>
-                                    <li>Martyrs of Kargil wars</li>
-                                    <li>Nubra Valley</li>
-                                    <li>Diskit monastery</li>
-                                    <li>Pangong</li>
-                                    <li>Thiksey Monastery</li>
-                                    <li>Khardungla pass</li>
-                                </ul>
-                            </div>
-                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample8" role="button"
-                                aria-expanded="false" aria-controls="collapseExample5">
-                                <span>Read More</span>
-                                <i>Close</i>
-                            </a>
-                        </div>
-                        <div class="price-tag">
-                            <div class="price">
-                                <small>
-                                    <i class="fa fa-rupee"></i> 18,999
-                                </small>
-                                <i class="fa fa-rupee"></i> 14,499 Onwards
-                            </div>
-                            <div class="btn-detail">
-                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
-                                    Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="packages">
-                        <figure>
-                            <img src="images/shrinagr-tour-package.jpg" alt="" class="img-fluid">
-                            <div class="tag">20% OFF</div>
-                            <div class="budget">
-                                <img src="images/budget.png" alt="" class="img-fluid">
-                            </div>
-                        </figure>
-                        <h2>SriNagar Tour Package</h2>
-                        <h3>6N/7D /
-                            <span>Srinagar(1N) - Gulmarg (1) - Pahalgam (2N) - Sonmarg (1N) - Srinagar (1N)</span>
-                        </h3>
-                        <ul class="itnry">
-                            <li class="active">
-                                <figure>
-                                    <img src="images/flight-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Flight</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/hotel-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Hotels</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/Sightseeing-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Sightseeing</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/meals-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Meals</p>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/transfer-icon.png" alt="" class="img-fluid">
-                                </figure>
-                                <p>Transfers</p>
-                            </li>
-                        </ul>
-                        <div class="inclusions">
-                            <h5>Destinations Covered:</h5>
-                            <ul class="pkg-incusion">
-                                <li>Srinagar(1N) - Gulmarg (1) - Pahalgam (2N) - Sonmarg (1N) - Srinagar (1N)</li>
-                            </ul>
-                            <div class="collapse" id="collapseExample9">
-                                <ul class="pkg-incusion">
-                                    <li>Srinagar</li>
-                                    <li>Dal Lke</li>
-                                    <li>Valley of Shepherds via Srinagar</li>
-                                    <li>visit Awantipura ruins of an 1100 yr old temple of Lord Vishnu</li>
-                                    <li>Pahalgam</li>
-                                    <li>Chandanwadi</li>
-                                    <li>Amarnath Yatra & Betab valley</li>
-                                    <li>Betaab valley</li>
-                                    <li>Aru Valley</li>
-                                    <li>Tarsar Lake</li>
-                                    <li>Lidder river</li>
-                                    <li>Sonmarg (Golden Meadow)</li>
-                                    <li>Thajiwas glacier</li>
-                                    <li>Shankracharya Temple</li>
-                                    <li>Famous Mughal Gardens</li>
-                                    <li>Nishat Bagh</li>
-                                    <li>Dal lake</li>
-                                    <li>Shalimar Abode of Love</li>
-                                    <li>Gulmarg</li>
-                                </ul>
-                            </div>
-                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample9" role="button"
-                                aria-expanded="false" aria-controls="collapseExample2">
-                                <span>Read More</span>
-                                <i>Close</i>
-                            </a>
-                        </div>
-                        <div class="price-tag">
-                            <div class="price">
-                                <small>
-                                    <i class="fa fa-rupee"></i> 16,999
-                                </small>
-                                <i class="fa fa-rupee"></i> 10,500 Onwards
-                            </div>
-                            <div class="btn-detail">
-                                <a href="#" class="btn btn-detail" data-toggle="modal" data-target="#exampleModal">Get
-                                    Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </section>
     <section id="confused">
@@ -1061,7 +394,7 @@ $all_data = $repo->all();
                     <h1 class="h1-global">
                         Customize & Book Amazing Holiday Packages with
                         <br>
-                        <span>FlySaifia.com</span>
+                        <span>BrolionTourism.com</span>
                     </h1>
                 </div>
             </div>
@@ -1116,17 +449,10 @@ $all_data = $repo->all();
             <div class="row">
                 <div class="col-md-12">
                     <ul class="ftr-link">
-                        <li>Himachal</li>
-                        <li>Spiti Valley</li>
-                        <li>Ladakh</li>
-                        <li>Uttarakhand</li>
-                        <li>Rajasthan</li>
-                        <li>North East India</li>
-                        <li>West Bangal</li>
-                        <li>Karnataka</li>
-                        <li>Goa</li>
-                        <li>Kerala</li>
-                        <li>Jammu & Kashmir</li>
+                        <?php foreach ($all_data as $dest) { ?>
+                            <li><?php echo $dest['destination']['name'] ?></li>
+
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -1151,13 +477,13 @@ $all_data = $repo->all();
                                 <i>
                                     <img src="images/call-ico.png" alt="" class="img-fluid">
                                 </i>
-                                <a href="tel: +91-9654710750">+91-9654710750</a>
+                                <a href="tel: +91-7566000147">+91-7566000147</a>
                             </li>
                             <li>
                                 <i>
                                     <img src="images/msg-ico.png" alt="" class="img-fluid">
                                 </i>
-                                <a href="mailto:holidays@flysaifia.com">holidays@flysaifia.com</a>
+                                <a href="mailto:info@broliontourism.com">info@broliontourism.com</a>
                             </li>
                         </ul>
                     </div>
@@ -1170,7 +496,7 @@ $all_data = $repo->all();
                         <h6 class="title font-bold">Find Us</h6>
                         <div class="media">
                             <div class="media-body">
-                                <p>www.flysaifia.com</p>
+                                <p>www.broliontourism.com</p>
                             </div>
                         </div>
                     </div>
@@ -1178,7 +504,7 @@ $all_data = $repo->all();
                         <h6 class="title font-bold">Call us</h6>
                         <div class="media">
                             <div class="media-body">
-                                <p>+91-9654710750</p>
+                                <p>+91-7566000147</p>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -1188,7 +514,7 @@ $all_data = $repo->all();
                         <div class="media">
                             <div class="media-body">
                                 <p>
-                                    <a href="mailto:holidays@flysaifia.com">holidays@flysaifia.com</a>
+                                    <a href="mailto:info@broliontourism.com">info@broliontourism.com</a>
                                 </p>
                             </div>
                         </div>
@@ -1201,7 +527,9 @@ $all_data = $repo->all();
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <p>@Copyright 2018, Flysaifia.com All Rights Reserved.</p>
+                    <p>@Copyright
+                        <?php echo date('Y') ?>, Brolion Tourism All Rights Reserved.
+                    </p>
                 </div>
             </div>
         </div>
@@ -1212,7 +540,7 @@ $all_data = $repo->all();
                 <div class="row">
                     <div class="col-md-3 p-0 col-3">
                         <div class="_col_m">
-                            <a class="_btn_bm" href="tel:+91-9654710750">
+                            <a class="_btn_bm" href="tel:917566000147">
                                 <i class="fa fa-phone fa-1x"></i>
                             </a>
                         </div>
@@ -1272,15 +600,20 @@ $all_data = $repo->all();
                         <div class="form-group">
                             <select class="form-control" name="package" id="package" required>
                                 <option value="">Select Package</option>
-                                <option>Manali Honeymoon Tour Packages</option>
-                                <option>Manali Volvo Tour Packages</option>
-                                <option>Shimla Manali Tour Package</option>
-                                <option>Amaranth Tour Package</option>
-                                <option>Andmaan Tour Package</option>
-                                <option>Kerala Tour Package</option>
-                                <option>Goa Tour Package</option>
-                                <option>Surreal Ladakh Holiday Package</option>
-                                <option>SriNagar Tour Package</option>
+                                <?php foreach ($all_data as $dest) {
+
+                                    foreach ($dest['packages'] as $pack) { ?>
+                                <option value="<?php echo $pack['title'] ?>">
+                                    <?php echo $pack['title'] ?>
+                                </option>
+
+
+                                <?php } ?>
+
+
+
+                                <?php } ?>
+
                             </select>
                         </div>
                         <div class="text-center">
@@ -1337,15 +670,14 @@ $all_data = $repo->all();
                         <div class="form-group">
                             <select class="form-control" name="package" id="package">
                                 <option value="">Select Package</option>
-                                <option>Manali Honeymoon Tour Packages</option>
-                                <option>Manali Volvo Tour Packages</option>
-                                <option>Shimla Manali Tour Package</option>
-                                <option>Amaranth Tour Package</option>
-                                <option>Andmaan Tour Package</option>
-                                <option>Kerala Tour Package</option>
-                                <option>Goa Tour Package</option>
-                                <option>Surreal Ladakh Holiday Package</option>
-                                <option>SriNagar Tour Package</option>
+                                <?php foreach ($all_data as $dest) {
+                                    foreach ($dest['packages'] as $pack) { ?>
+                                <option value="<?php echo $pack['title'] ?>">
+                                    <?php echo $pack['title'] ?>
+                                </option>
+                                <?php } ?>
+                                <?php } ?>
+
                             </select>
                         </div>
                         <button type="submit" class="btn btn-enq " name="submit" value="Send request">Send
