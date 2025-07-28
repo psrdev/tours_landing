@@ -49,8 +49,8 @@ $all_data = $repo->all();
                     </div>
                     <div class="col-md-3">
                         <div class="text-center">
-                            <a href="#" class="btn deal" data-toggle="modal" data-target="#exampleModal-1">Last Minute
-                                Deal</a>
+                            <!--<a href="#" class="btn deal" data-toggle="modal" data-target="#exampleModal-1">Last Minute-->
+                            <!--    Deal</a>-->
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -115,7 +115,7 @@ $all_data = $repo->all();
                         <div class="free-quotes">
                             <div class="get-free" id="Get-Free-Quote">Get Free Quote</div>
                             <div class="get-free-qoute">
-                                <form method="POST" name="indexform" action="query-form.php">
+                                <form method="POST" name="indexform" action="/packages/contact">
                                     <div class="form-group">
                                         <input type="text" name="name" class="form-control" placeholder="*Name"
                                             required>
@@ -567,7 +567,7 @@ $all_data = $repo->all();
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="POST" name="indexform" action="query-form.php">
+                    <form method="POST" name="indexform" action="/packages/contact">
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="*Name" required>
                         </div>
@@ -637,7 +637,7 @@ $all_data = $repo->all();
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="POST" name="indexform" action="query-form.php">
+                    <form method="POST" name="indexform" action="/packages/contact">
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="*Name" required>
                         </div>

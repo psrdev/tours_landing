@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /packages/
+  DirectoryIndex index.php
+
+  # 🔒 Deny access to sensitive files
+  RewriteRule ^(\.env|\.git|\.htaccess|composer\.(json|lock)|config\.php)$ - [F,L]
+
+  # 🔒 Deny direct access to PHP files except index.php
+  RewriteCond %{REQUEST_URI} !^/packages/index\.php$
+  RewriteRule ^(.*\.php)$ - [F,L]
+
+  # ✅ Allow existing static files (CSS, JS, images)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 🔁 Route everything else to index.php
+  RewriteRule ^ index.php [QSA,L]
+</IfModule>
