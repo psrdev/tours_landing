@@ -115,7 +115,11 @@ $all_data = $repo->all();
                         <div class="free-quotes">
                             <div class="get-free" id="Get-Free-Quote">Get Free Quote</div>
                             <div class="get-free-qoute">
+<<<<<<< HEAD
                                 <form method="POST" name="indexform" action="/packages/contact">
+=======
+                                <form method="POST" name="indexform" action="/contact">
+>>>>>>> a2d9b8a0c14825ad35beb3c786aded197e70c1ee
                                     <div class="form-group">
                                         <input type="text" name="name" class="form-control" placeholder="*Name"
                                             required>
@@ -567,7 +571,11 @@ $all_data = $repo->all();
                     </button>
                 </div>
                 <div class="modal-body">
+<<<<<<< HEAD
                     <form method="POST" name="indexform" action="/packages/contact">
+=======
+                    <form method="POST" name="indexform" action="/contact">
+>>>>>>> a2d9b8a0c14825ad35beb3c786aded197e70c1ee
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="*Name" required>
                         </div>
@@ -637,7 +645,11 @@ $all_data = $repo->all();
                     </button>
                 </div>
                 <div class="modal-body">
+<<<<<<< HEAD
                     <form method="POST" name="indexform" action="/packages/contact">
+=======
+                    <form method="POST" name="indexform" action="/contact">
+>>>>>>> a2d9b8a0c14825ad35beb3c786aded197e70c1ee
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="*Name" required>
                         </div>

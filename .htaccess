@@ -3,6 +3,7 @@
   RewriteBase /packages/
   DirectoryIndex index.php
 
+<<<<<<< HEAD
   # 🔒 Deny access to sensitive files
   RewriteRule ^(\.env|\.git|\.htaccess|composer\.(json|lock)|config\.php)$ - [F,L]
 
@@ -11,10 +12,24 @@
   RewriteRule ^(.*\.php)$ - [F,L]
 
   # ✅ Allow existing static files (CSS, JS, images)
+=======
+  # Block access to specific sensitive files (but NOT index.php)
+  <FilesMatch "^(\.env|\.git|\.htaccess|composer\.json|composer\.lock|config\.php)$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+
+  # Allow static files (CSS, JS, images) to load normally
+>>>>>>> a2d9b8a0c14825ad35beb3c786aded197e70c1ee
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
+<<<<<<< HEAD
   # 🔁 Route everything else to index.php
   RewriteRule ^ index.php [QSA,L]
+=======
+  # Redirect all other requests to index.php
+  RewriteRule ^ index.php [L]
+>>>>>>> a2d9b8a0c14825ad35beb3c786aded197e70c1ee
 </IfModule>
