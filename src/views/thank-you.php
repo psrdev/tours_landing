@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Thanks Message - FLY Saifia</title>
+    <title>Thanks Message - Brolion Tourism</title>
     <meta name="robots" content="noindex, nofollow, noodp">
     <link href="images/favicon.ico" type="image/x-icon" rel="shortcut icon">
     <script language="javascript" type="text/javascript">
@@ -32,7 +32,7 @@
         <h2>
             <font color="#008000">MOBILE: +91 7566000147</font>
             <h2>
-                <font color="#008000">EMAIL: info@broliontourism.com</font>
+                <font color="#008000">EMAIL: booknow@broliontourism.com</font>
                 <br>
                 <br>
                 <br>
@@ -44,6 +44,7 @@
                         </a>
                     </a>
                 </div>
+
     </div>
     <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
     <script type="text/javascript"></script>

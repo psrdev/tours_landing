@@ -30,7 +30,8 @@ $router->get('/thank-you', function () {
     return ob_get_clean();
 });
 
-$router->post('/contact', function () use ($basePath) {
+$router->post('/packages/contact', function () use ($basePath) {
+    // Sanitize and validate input
     $name = htmlspecialchars(trim($_POST['name'] ?? ''));
     $email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
     $phone = htmlspecialchars(trim($_POST['phone'] ?? ''));
@@ -56,42 +57,45 @@ $router->post('/contact', function () use ($basePath) {
 
     try {
         $mail = new PHPMailer(true);
+
+        // Debugging output
+        $mail->SMTPDebug = 3;
+        $mail->Debugoutput = function ($str, $level) {
+            error_log("SMTP DEBUG [$level]: $str");
+        };
+
+        // SMTP settings
         $mail->isSMTP();
         $mail->Host = $_ENV['MAIL_HOST'];
         $mail->SMTPAuth = true;
         $mail->Username = $_ENV['MAIL_USERNAME'];
         $mail->Password = $_ENV['MAIL_PASSWORD'];
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Use TLS for port 587 or ENCRYPTION_SMTPS for 465
+        $mail->Port = 465;
+        $mail->Timeout = 10; // seconds
 
-        // Encryption setup
-        $encryption = strtolower($_ENV['MAIL_ENCRYPTION']);
-        if ($encryption === 'ssl') {
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-            $mail->Port = 465;
-        } elseif ($encryption === 'tls') {
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port = 587;
-        } else {
-            $mail->SMTPSecure = false;
-            $mail->Port = $_ENV['MAIL_PORT'];
-        }
-
+        // Sender and recipient
         $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME'] ?? 'Website Enquiry');
-        $mail->addAddress("info@broliontourism.com");
+        $mail->addAddress("psranadeveloper@gmail.com");
 
+        // Email content
         $mail->isHTML(true);
         $mail->Subject = $subject;
         $mail->Body = $body;
 
+        // Send the mail
         $mail->send();
 
-        // ✅ Redirect with subfolder awareness
+        // Redirect to thank-you page
         header("Location: {$basePath}/thank-you");
         exit;
     } catch (Exception $e) {
+        error_log("Mailer Exception: " . $mail->ErrorInfo);
         http_response_code(500);
-        return "Mailer Error: {$mail->ErrorInfo}";
+        return "Mailer Error: " . $mail->ErrorInfo;
     }
 });
+
 
 // Dispatch request
 $router->dispatch();

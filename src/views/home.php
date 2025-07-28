@@ -67,7 +67,9 @@ $all_data = $repo->all();
                                     <i>
                                         <img src="images/msg-ico.png" alt="">
                                     </i>
-                                    <a href="mailto:info@broliontourism.com">info@broliontourism.com</a>
+                                    <a href="mailto:booknow@broliontourism.com
+">booknow@broliontourism.com
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -129,7 +131,7 @@ $all_data = $repo->all();
                                             required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="date" class="form-control"
+                                        <input type="date" name="date" class="form-control"
                                             placeholder="Travel Date (DD/MM/YY)" required>
                                     </div>
                                     <div class="form-group">
@@ -483,7 +485,9 @@ $all_data = $repo->all();
                                 <i>
                                     <img src="images/msg-ico.png" alt="" class="img-fluid">
                                 </i>
-                                <a href="mailto:info@broliontourism.com">info@broliontourism.com</a>
+                                <a href="mailto:booknow@broliontourism.com
+">booknow@broliontourism.com
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -514,7 +518,9 @@ $all_data = $repo->all();
                         <div class="media">
                             <div class="media-body">
                                 <p>
-                                    <a href="mailto:info@broliontourism.com">info@broliontourism.com</a>
+                                    <a href="mailto:booknow@broliontourism.com
+">booknow@broliontourism.com
+                                    </a>
                                 </p>
                             </div>
                         </div>
@@ -578,7 +584,7 @@ $all_data = $repo->all();
                             <input type="text" name="phone" class="form-control" placeholder="*Mobile No." required>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="date" class="form-control" placeholder="Travel Date (DD/MM/YY)"
+                            <input type="date" name="date" class="form-control" placeholder="Travel Date (DD/MM/YY)"
                                 required>
                         </div>
                         <div class="form-group">
@@ -648,7 +654,7 @@ $all_data = $repo->all();
                             <input type="text" name="phone" class="form-control" placeholder="*Mobile No." required>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="date" class="form-control" placeholder="Travel Date (DD/MM/YY)"
+                            <input type="date" name="date" class="form-control" placeholder="Travel Date (DD/MM/YY)"
                                 required>
                         </div>
                         <div class="form-group">
