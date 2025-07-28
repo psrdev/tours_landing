@@ -2,10 +2,15 @@
 
 require __DIR__ . '/src/bootstrap.php';
 
-
 use App\Router;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
+// ✅ Handle subdirectory (e.g., /packages)
+$basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+if (strpos($_SERVER['REQUEST_URI'], $basePath) === 0) {
+    $_SERVER['REQUEST_URI'] = substr($_SERVER['REQUEST_URI'], strlen($basePath));
+}
 
 // Initialize the router
 $router = new Router();
@@ -17,6 +22,7 @@ $router->get('/', function () {
     include __DIR__ . '/src/views/home.php';
     return ob_get_clean();
 });
+
 $router->get('/thank-you', function () {
     ob_start();
     $title = "Thank You";
@@ -24,12 +30,7 @@ $router->get('/thank-you', function () {
     return ob_get_clean();
 });
 
-
-
-
-$router->post('/contact', function () {
-
-
+$router->post('/contact', function () use ($basePath) {
     $name = htmlspecialchars(trim($_POST['name'] ?? ''));
     $email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
     $phone = htmlspecialchars(trim($_POST['phone'] ?? ''));
@@ -55,7 +56,6 @@ $router->post('/contact', function () {
 
     try {
         $mail = new PHPMailer(true);
-
         $mail->isSMTP();
         $mail->Host = $_ENV['MAIL_HOST'];
         $mail->SMTPAuth = true;
@@ -76,7 +76,7 @@ $router->post('/contact', function () {
         }
 
         $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME'] ?? 'Website Enquiry');
-        $mail->addAddress($_ENV['MAIL_USERNAME']); // Send to yourself
+        $mail->addAddress("info@broliontourism.com");
 
         $mail->isHTML(true);
         $mail->Subject = $subject;
@@ -84,7 +84,8 @@ $router->post('/contact', function () {
 
         $mail->send();
 
-        header('Location: /thank-you');
+        // ✅ Redirect with subfolder awareness
+        header("Location: {$basePath}/thank-you");
         exit;
     } catch (Exception $e) {
         http_response_code(500);
@@ -92,6 +93,6 @@ $router->post('/contact', function () {
     }
 });
 
-
 // Dispatch request
 $router->dispatch();
+

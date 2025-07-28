@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /packages/
+  DirectoryIndex index.php
+
+  # Block access to specific sensitive files (but NOT index.php)
+  <FilesMatch "^(\.env|\.git|\.htaccess|composer\.json|composer\.lock|config\.php)$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+
+  # Allow static files (CSS, JS, images) to load normally
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Redirect all other requests to index.php
+  RewriteRule ^ index.php [L]
+</IfModule>
