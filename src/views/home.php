@@ -34,9 +34,30 @@ $all_data = $repo->all();
     <link href="css/slick.css" rel="stylesheet" type="text/css" media="screen">
     <link href="css/slick-theme.css" rel="stylesheet" type="text/css" media="screen">
     <link rel="stylesheet" href="css/slicknav.css">
+
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K6R385M4');
+    </script>
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6R385M4" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <section id="header">
         <header>
@@ -544,6 +565,7 @@ $all_data = $repo->all();
         <div class="inner_mobile">
             <div class="container">
                 <div class="row">
+                    <!-- Call Button -->
                     <div class="col-md-3 p-0 col-3">
                         <div class="_col_m">
                             <a class="_btn_bm" href="tel:917566000147">
@@ -551,16 +573,29 @@ $all_data = $repo->all();
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-9 p-0">
+
+                    <!-- WhatsApp Button -->
+                    <div class="col-md-3 p-0 col-3">
+                        <div class="_col_m">
+                            <a class="_btn_bm" href="https://wa.me/917566000147" target="_blank">
+                                <i class="fa fa-whatsapp fa-1x"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Send Enquiry Button -->
+                    <div class="col-md-6 p-0 col-6">
                         <div class="_col_bm">
-                            <button type="button" class="_btn_bm" data-toggle="modal" data-target="#exampleModal">SEND
-                                ENQUIRY</button>
+                            <button type="button" class="_btn_bm" data-toggle="modal" data-target="#exampleModal">
+                                SEND ENQUIRY
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-------------------------Modal----------------------->
     <div class="modal fade coi-pop" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -686,6 +721,7 @@ $all_data = $repo->all();
 
                             </select>
                         </div>
+
                         <button type="submit" class="btn btn-enq " name="submit" value="Send request">Send
                             Enquiry</button>
                     </form>
